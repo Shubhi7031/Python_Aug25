@@ -386,10 +386,259 @@ print("-"*100)
 print("\nQuestion 28: Find the maximum value in 4D list")
 # Your code here
 
+list4d= [
+
+[
+    [[1,2],[3,4]],
+    
+    [[5,6],[7,8]]
+    ],
+
+[
+    [[9,10],[11,12]],
+
+    [[13,14],[15,16]]
+]
+
+
+]
+max_value=0
+for layers in list4d:
+    for matrix in layers:
+        for list1d in matrix:
+            for num in list1d:
+                if num> max_value:
+                    max_value= num
+
+print(max_value)
+print("-"*100)
+
 # Question 29: Create a list of sets: [{1, 2, 3}, {4, 5, 6}, {7, 8, 9}]
 print("\nQuestion 29: Create a list of sets: [{1, 2, 3}, {4, 5, 6}, {7, 8, 9}]")
 # Your code here
 
+list1=[{1,2,3},{4,5,6},{7,8,9}]
+print(list1)
+print("-"*100)
+
+
 # Question 30: Find the union of all sets in list of sets
 print("\nQuestion 30: Find the union of all sets in list of sets")
 # Your code here
+
+list1=[{1,2,3},{4,5,6},{7,8,9}]
+result= list1[0].union(list1[1])
+final_result= result.union(list1[2])
+
+print(final_result)
+print("-"*100)
+
+# Question 31: Create a list of complex numbers: [1+2j, 3+4j, 5+6j]
+print("\nQuestion 31: Create a list of complex numbers: [1+2j, 3+4j, 5+6j]")
+# Your code here
+
+list1= [1+2j,3+4j,5+6j]
+print(list1)
+print("-"*100)
+
+# Question 32: Find the magnitude of each complex number in list
+print("\nQuestion 32: Find the magnitude of each complex number in list")
+# Your code here
+
+list1= [1+2j,3+4j,5+6j]
+
+for num in list1:
+    print(f"the magnitude of {num} is {abs(num)}")
+
+print("-"*100)
+
+
+
+# Question 33: Create a nested list with different levels: [1, [2, 3], [4, [5, 6]], 7]
+print("\nQuestion 33: Create a nested list with different levels: [1, [2, 3], [4, [5, 6]], 7]")
+# Your code here
+
+list1= [1,[2,3],[4,[5,6]],7]
+print(list1)
+print("-"*100)
+
+
+# Question 34: Count the depth of nesting in [1, [2, 3], [4, [5, 6]], 7]
+print("\nQuestion 34: Count the depth of nesting in [1, [2, 3], [4, [5, 6]], 7]")
+# Your code here
+
+list1= [1,[2,3],[4,[5,6]],7]
+def get_depth(lst):
+    if not isinstance(lst,list):
+        return 0
+    elif not lst:
+        return 1
+    else:
+        return 1 + max(get_depth(item) for item in lst)
+depth= get_depth(list1)
+print(f"the depth of the list1 is {depth}")
+print("-"*100)
+
+# Question 35: Create a list of functions: [len, str, int, float]
+print("\nQuestion 35: Create a list of functions: [len, str, int, float]")
+# Your code here
+
+list1= [len,str,int,float]
+print(list1)
+print("-"*100)
+
+# Question 36: Apply each function in list to string "123"
+print("\nQuestion 36: Apply each function in list to string '123'")
+# Your code here
+
+list1= [len,str,int,float]
+input_str= "123"
+
+for func in list1:
+    result= func(input_str)
+print(f" {result}")
+print("-"*100)
+
+# Question 37: Create a list of lambda functions: [lambda x: x*2, lambda x: x**2, lambda x: x+1]
+print("\nQuestion 37: Create a list of lambda functions: [lambda x: x*2, lambda x: x**2, lambda x: x+1]")
+# Your code here
+
+list1= [lambda x: x*2, lambda x:x**2, lambda x:x+1]
+print(list1)
+print("-"*100)
+
+# Question 38: Apply each lambda function to 5
+print("\nQuestion 38: Apply each lambda function to 5")
+# Your code here
+
+list1= [lambda x: x*2, lambda x:x**2, lambda x:x+1]
+
+for func in list1:
+    result= func(5)
+    print(result)
+
+print("-"*100)
+
+# Question 39: Create a list of classes: [list, dict, set, tuple]
+print("\nQuestion 39: Create a list of classes: [list, dict, set, tuple]")
+# Your code here
+
+list1=[list, dict, set, tuple]
+print(list1)
+print("-"*100)
+
+# Question 40: Create instances of each class in list
+print("\nQuestion 40: Create instances of each class in list")
+# Your code here
+
+list1=[list, dict, set, tuple]
+
+for cls in list1:
+    result= cls()
+    print(result)
+
+print("-"*100)
+
+
+# Question 41: Create a list of None values: [None, None, None, None]
+print("\nQuestion 41: Create a list of None values: [None, None, None, None]")
+# Your code here
+
+list1=[None, None, None, None]
+print(list1)
+print("-"*100)
+
+# Question 42: Replace all None values with 0 in list
+print("\nQuestion 42: Replace all None values with 0 in list")
+# Your code here
+
+list1=[None, None, None, None]
+list2=[]
+for values in list1:
+    values= 0
+    list2.append(values)
+
+print(list2)
+print("-"*100)
+
+# Question 43: Create a list of boolean values: [True, False, True, False]
+print("\nQuestion 43: Create a list of boolean values: [True, False, True, False]")
+# Your code here
+
+list1= [True, False, True, False]
+print(list1)
+
+print("-"*100)
+
+# Question 44: Count True values in boolean list
+print("\nQuestion 44: Count True values in boolean list")
+# Your code here
+
+
+list1= [True, False, True, False]
+count=0
+for values in list1:
+    if values==True:
+        count= count+1
+    
+
+print(count)
+print("-"*100)
+
+
+# Question 45: Create a list of ranges: [range(3), range(5), range(2)]
+print("\nQuestion 45: Create a list of ranges: [range(3), range(5), range(2)]")
+# Your code here
+
+list1=[range(3), range(5), range(2)]
+print(list1)
+print("-"*100)
+
+# Question 46: Convert each range to list
+print("\nQuestion 46: Convert each range to list")
+# Your code here
+
+list1=[range(3), range(5), range(2)]
+
+for r in list1:
+    print(list(r))
+
+print("-"*100)
+
+# Question 47: Create a list of generators: [(x for x in range(3)), (x for x in range(5))]
+print("\nQuestion 47: Create a list of generators: [(x for x in range(3)), (x for x in range(5))]")
+# Your code here
+
+list1=[(x for x in range(3)),(x for x in range(5))]
+print(list1)
+print("-"*100)
+
+# Question 48: Convert each generator to list
+print("\nQuestion 48: Convert each generator to list")
+# Your code here
+
+list1=[(x for x in range(3)),(x for x in range(5))]
+
+for r in list1:
+    print(list(r))
+
+print("-"*100)
+
+# Question 49: Create a list of iterators: [iter([1, 2, 3]), iter([4, 5, 6])]
+print("\nQuestion 49: Create a list of iterators: [iter([1, 2, 3]), iter([4, 5, 6])]")
+# Your code here
+
+list1=[iter([1,2,3]),iter([4,5,6])]
+print(list1)
+print("-"*100)
+
+# Question 50: Extract all elements from each iterator
+print("\nQuestion 50: Extract all elements from each iterator")
+# Your code here 
+
+list1=[iter([1,2,3]),iter([4,5,6])]
+
+for items in list1:
+    print(list(items))
+
+print("-"*100)
